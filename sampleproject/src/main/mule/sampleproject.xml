@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="4b282dbe-a7ea-4703-b11d-8de278871fd4" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="sampleprojectFlow" doc:id="4944681e-2665-4c34-b7bf-1835416d76d8" >
+		<http:listener doc:name="Listener" doc:id="f87491d3-97fe-4846-baae-e0944f8e205a" config-ref="HTTP_Listener_config" path="/sample"/>
+		<set-payload value="Testing Azure DevOps.." doc:name="Set Payload" doc:id="0ed280f0-2e30-4697-923e-6244443f1ae9" />
+		<logger level="INFO" doc:name="Logger" doc:id="e20bb322-b61b-4c9e-8e4c-a918e2c53c2f" message="This is to test #[payload]"/>
+	</flow>
+</mule>
