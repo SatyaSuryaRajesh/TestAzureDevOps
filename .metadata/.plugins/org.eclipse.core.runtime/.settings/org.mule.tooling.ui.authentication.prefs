@@ -1,0 +1,5 @@
+authenticated.users=[{"id"\:"f6766c9b-978c-493e-8427-5c08071b48f1","token"\:"bac439a7-c552-4391-83a9-124714d313d5","userId"\:"satyasuryarajesh123","refreshToken"\:"","baseUrl"\:"https\://anypoint.mulesoft.com/"}]
+current.token=bac439a7-c552-4391-83a9-124714d313d5
+current.user=satyasuryarajesh123
+eclipse.preferences.version=1
+expiration.time=7
